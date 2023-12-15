@@ -1,12 +1,18 @@
 let bgMusic = new Audio("assets/music.mp3");
 let turnSound = new Audio("assets/ting.mp3");
 let gameOver = new Audio("assets/Gameover.mp3");
+let body = document.querySelector("body");
 let turn = "X";
 let gameover = false;
 
 const changeTurn = () => {
     return turn === "X"?"0": "X";
 }
+
+body.addEventListener("mousemove", () => {
+    bgMusic.play();
+    bgMusic.volume = 0.03;
+})
 
 // Function to check for a win
 const checkWin = () => {
